@@ -1,5 +1,9 @@
-<?php
 
+
+<?php
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
 //Adds script and stylesheets
 function inhabitant_files() {
     wp_enqueue_style('inhabitant_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());
@@ -33,5 +37,13 @@ function inhabitent_widgets(){
 }
 
 add_action('widgets_init', 'inhabitent_widgets');
+
+//below allows fontawesome's favicon!
+
+add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
+
+function tthq_add_custom_fa_css() {
+wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+}
 
 ?>

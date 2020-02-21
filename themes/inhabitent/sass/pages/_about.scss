@@ -1,0 +1,29 @@
+body{
+    min-height:100vh;
+    height:auto;
+    width:100vw;
+}
+
+
+
+.hero-banner{
+    width:100%;
+    height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
+    background-size: 100% auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size:4vw;
+    }
+
+    // padding-top: 56.25%;   //16:9 aspect ratio
+
+    &:before{
+        display:none;
+    }
+
+
+}
+
