@@ -1,8 +1,36 @@
+
+header{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width:100%;
+    color:white;
+    height:10vh;
+}
+
+
+.main-menu-wrapper ul{
+    display:flex;   
+    font-size: 2.5rem;
+    a{
+        text-decoration:none; 
+    }
+}
+
 body{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     min-height:100vh;
     height:auto;
     width:100vw;
+    font-size: $font-size-base;
 }
+
+// h3{
+//     display:none;
+// }
 
 
 
@@ -16,14 +44,26 @@ body{
 
     p{
         font-size:4vw;
+        width:100%;
     }
-
     // padding-top: 56.25%;   //16:9 aspect ratio
 
-    &:before{
-        display:none;
-    }
+    // &:before{
+    //     background-image: linear-gradiant(to bottom, rgba(0,0,0,1) rgba(0,0,0,0.5));
+    // }
+}
 
+h2{
+    font-size:5rem;
+    margin-bottom:$spacing-unit-base;
+}
 
+p{
+    font-size:2rem;
+    text-align:left;
+    width:75%;
+    color:black;
+    line-height:$line-height-base;
+    margin-bottom:$spacing-unit-base;
 }
 

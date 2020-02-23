@@ -96,6 +96,15 @@ table {
   font-weight: bold;
   font-style: normal; }
 
+header {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  z-index: 2; }
+
 .main-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,10 +114,44 @@ body {
   background: white;
   font-size: 2em; }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: white;
+  height: 10vh; }
+
+.main-menu-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.5rem; }
+  .main-menu-wrapper ul a {
+    text-decoration: none; }
+
 body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   height: auto;
-  width: 100vw; }
+  width: 100vw;
+  font-size: 16px; }
 
 .hero-banner {
   width: 100%;
@@ -124,6 +167,17 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .hero-banner p {
-    font-size: 4vw; }
-  .hero-banner:before {
-    display: none; }
+    font-size: 4vw;
+    width: 100%; }
+
+h2 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem; }
+
+p {
+  font-size: 2rem;
+  text-align: left;
+  width: 75%;
+  color: black;
+  line-height: 1.75;
+  margin-bottom: 1.5rem; }
