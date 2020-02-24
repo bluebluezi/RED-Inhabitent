@@ -14,3 +14,7 @@ themes/*
 !themes/inhabitent/
 # Ignore packages #
 themes/inhabitent/node_modules/
+
+# Ignore everything in the uploads folder
+uploads/*
+
