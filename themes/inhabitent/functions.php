@@ -38,6 +38,25 @@ function inhabitent_widgets(){
 
 add_action('widgets_init', 'inhabitent_widgets');
 
+function inhabitent_post_types(){
+    register_post_type('product', array(
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'public' => true,
+        'supports' => array('title','editor','thumbnail'),       //states what we want to edit in post type
+        'labels' => array(
+            'name' => 'Products',
+            'add_new_item' => 'Add New Product',
+            'edit_item' => 'Edit Product',
+            'all_items' => 'All Products',
+            'singular_name' => 'Product'
+        ),    
+        'menu_item' => 'dashicons-store'   
+    ));
+}
+
+add_action('init', 'inhabitent_post_types');
+
 //below allows fontawesome's favicon!
 
 add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
