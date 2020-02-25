@@ -99,42 +99,71 @@ table {
 header {
   position: absolute;
   top: 0;
+  display: grid;
+  grid-template-columns: 6.6% 7.24% 45% 29% auto 6.6%;
+  width: 100%;
+  z-index: 2;
+  height: 10vh; }
+  header .logo-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-column: 2 / 3; }
+    header .logo-wrapper img {
+      max-height: 50%;
+      width: auto; }
+  header .search-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .search-wrapper .fa-search,
+    header .search-wrapper .fa-search:before {
+      display: block; }
+
+.main-menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  z-index: 2; }
-
-.main-menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  grid-column: 4 / 5; }
+  .main-menu-wrapper .menu-main-menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .main-menu-wrapper .menu-main-menu-container ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 1.2rem;
+      width: 100%;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .main-menu-wrapper .menu-main-menu-container ul a {
+        text-decoration: none;
+        color: white; }
 
 body {
   background: white;
   font-size: 2em; }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  color: white;
-  height: 10vh; }
-
-.main-menu-wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2.5rem; }
-  .main-menu-wrapper ul a {
-    text-decoration: none; }
+  color: white; }
 
 body {
   position: relative;
@@ -157,6 +186,7 @@ body {
   width: 100%;
   height: calc(100vw / 1.5);
   background-size: 100% auto;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

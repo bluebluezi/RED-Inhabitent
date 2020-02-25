@@ -1,11 +1,57 @@
 header{
     position:absolute;
     top:0;
-    display:flex;
+    display:grid;
+    grid-template-columns: 6.6% 7.24% 45% 29% auto 6.6%;
+        //6.6% 7.24% auto 29% 2% 6.6% where auto was 45%
     width:100%;
     z-index:2;
+    height:10vh;
+    .logo-wrapper{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        grid-column: 2 / 3;
+        img{
+            max-height:50%;
+            width:auto;
+        }
+    }
+    .search-wrapper{
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        
+        .fa-search,
+        .fa-search:before{
+         display:block;
+        }
+
+    }
+
 }
 
-.main-menu ul{
-    display:flex;    
+.main-menu-wrapper{
+    display:flex;
+    grid-column: 4 / 5;
+    .menu-main-menu-container{
+        display:flex;
+        width:100%;
+        ul{
+            display:flex;   
+            font-size: 1.2rem; //1.4rem
+            width:100%;
+            justify-content: space-around;
+            align-items:center;
+            a{
+                text-decoration:none;
+                color:white;
+            }
+        }
+    }
 }
+
+
+
+
