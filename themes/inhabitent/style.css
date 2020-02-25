@@ -146,7 +146,7 @@ header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 1.2rem;
+      font-size: 1rem;
       width: 100%;
       -ms-flex-pack: distribute;
           justify-content: space-around;
@@ -155,7 +155,11 @@ header {
               align-items: center; }
       .main-menu-wrapper .menu-main-menu-container ul a {
         text-decoration: none;
-        color: white; }
+        color: white;
+        font-family: "Novecento Sans Web"; }
+
+footer {
+  font-family: "Novecento Sans Web"; }
 
 body {
   background: white;
@@ -199,11 +203,11 @@ body {
   .hero-banner p {
     font-size: 4vw;
     width: 100%;
-    font-family: "Merriweather Web"; }
+    font-family: "Novecento Sans Web"; }
 
 h2 {
   font-size: 5rem;
-  font-family: "Novovento Sans Web";
+  font-family: "Novecento Sans Web";
   margin-bottom: 1.5rem; }
 
 p {

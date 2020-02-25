@@ -6,6 +6,7 @@ header{
     width:100%;
     z-index:2;
     height:10vh;
+
     .logo-wrapper{
         display:flex;
         justify-content:center;
@@ -16,6 +17,7 @@ header{
             width:auto;
         }
     }
+
     .search-wrapper{
         position:relative;
         display:flex;
@@ -32,20 +34,26 @@ header{
 }
 
 .main-menu-wrapper{
+
     display:flex;
     grid-column: 4 / 5;
+
     .menu-main-menu-container{
         display:flex;
         width:100%;
+
         ul{
             display:flex;   
-            font-size: 1.2rem; //1.4rem
+            font-size: 1rem; //1.4rem
             width:100%;
             justify-content: space-around;
             align-items:center;
+            
+
             a{
                 text-decoration:none;
                 color:white;
+                font-family:$font-family-secondary;
             }
         }
     }
