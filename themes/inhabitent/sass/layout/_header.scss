@@ -1,6 +1,5 @@
 header{
-    position:absolute;
-    top:0;
+    position:fixed;
     display:grid;
     grid-template-columns: 6.6% 7.24% auto 29% 2% 6.6%;
     //6.6% 7.24% auto 29% 2% 6.6% where auto was 45% maybe try 1fr and change icon size to auto;
