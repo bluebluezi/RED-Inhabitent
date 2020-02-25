@@ -115,7 +115,7 @@ header {
             align-items: center;
     grid-column: 2 / 3; }
     header .logo-wrapper img {
-      max-height: 50%;
+      max-height: 80%;
       width: auto; }
   header .search-wrapper {
     position: relative;
@@ -146,7 +146,6 @@ header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 1rem;
       width: 100%;
       -ms-flex-pack: distribute;
           justify-content: space-around;
@@ -155,6 +154,8 @@ header {
               align-items: center; }
       .main-menu-wrapper .menu-main-menu-container ul a {
         text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
         color: white;
         font-family: "Novecento Sans Web"; }
 
@@ -184,7 +185,8 @@ body {
   height: auto;
   width: 100vw;
   font-size: 16px;
-  font-family: "Merriweather Web"; }
+  font-family: "Merriweather Web";
+  color: #404040; }
 
 .hero-banner {
   width: 100%;
@@ -203,17 +205,23 @@ body {
   .hero-banner p {
     font-size: 4vw;
     width: 100%;
-    font-family: "Novecento Sans Web"; }
+    font-family: "Novecento Sans Web";
+    text-transform: uppercase;
+    font-weight: bold; }
 
 h2 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-family: "Novecento Sans Web";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2f1339;
   margin-bottom: 1.5rem; }
 
 p {
-  font-size: 2rem;
+  font-size: 1.25rem;
+  color: #404040;
+  font-weight: medium;
   text-align: left;
-  width: 75%;
-  color: black;
+  width: 66%;
   line-height: 1.75;
   margin-bottom: 1.5rem; }

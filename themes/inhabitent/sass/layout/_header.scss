@@ -13,7 +13,7 @@ header{
         align-items:center;
         grid-column: 2 / 3;
         img{
-            max-height:50%;
+            max-height:80%;
             width:auto;
         }
     }
@@ -44,7 +44,6 @@ header{
 
         ul{
             display:flex;   
-            font-size: 1rem; //1.4rem
             width:100%;
             justify-content: space-around;
             align-items:center;
@@ -52,6 +51,8 @@ header{
 
             a{
                 text-decoration:none;
+                text-transform:uppercase;
+                font-size: 1.2rem; //1.4rem
                 color:white;
                 font-family:$font-family-secondary;
             }

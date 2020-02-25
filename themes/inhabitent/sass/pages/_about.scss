@@ -16,6 +16,7 @@ body{
     width:100vw;
     font-size: $font-size-base;
     font-family: $font-family-primary;
+    color: $font-color-base;
 }
 
 // h3{
@@ -36,7 +37,9 @@ body{
     p{
         font-size:4vw;
         width:100%;
-        font-family: $font-family-secondary;
+        @include font-secondary-uppercase(){
+            font-weight: bold;
+        }
     }
     // padding-top: 56.25%;   //16:9 aspect ratio
 
@@ -46,16 +49,21 @@ body{
 }
 
 h2{
-    font-size:5rem;
-    font-family: $font-family-secondary;
+    font-size:2.5rem;
+    @include font-secondary-uppercase(){
+        font-weight:bold;
+        color:$color-brand-purple;
+    }
+
     margin-bottom:$spacing-unit-base;
 }
 
 p{
-    font-size:2rem;
+    font-size:1.25rem;
+    color:$font-color-base;
+    font-weight:medium;
     text-align:left;
-    width:75%;
-    color:black;
+    width:66%;
     line-height:$line-height-base;
     margin-bottom:$spacing-unit-base;
 }

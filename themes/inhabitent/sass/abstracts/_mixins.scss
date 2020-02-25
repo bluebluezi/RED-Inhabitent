@@ -6,3 +6,11 @@
 // }
 
 //@first mixin the header layout
+
+
+
+@mixin font-secondary-uppercase{
+    font-family: $font-family-secondary;
+    text-transform:uppercase;
+    @content;
+}
