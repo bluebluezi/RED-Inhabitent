@@ -1,11 +1,11 @@
 header{
     position:fixed;
     display:grid;
-    grid-template-columns: 6.6% 7.24% auto 29% 2% 6.6%;
-    //6.6% 7.24% auto 29% 2% 6.6% where auto was 45% maybe try 1fr and change icon size to auto;
+    grid-template-columns: 3.5% 7.24% auto 29% 2% 3.5%;
+    //3.5% 7.24% auto 29% 2% 3.5% where auto was 45% maybe try 1fr and change icon size to auto;
     width:100%;
     z-index:2;
-    height:10vh;
+    height:8vh;
 
     .logo-wrapper{
         display:flex;
@@ -13,7 +13,7 @@ header{
         align-items:center;
         grid-column: 2 / 3;
         img{
-            max-height:80%;
+            max-height:65%;
             width:auto;
         }
     }
@@ -52,9 +52,11 @@ header{
             a{
                 text-decoration:none;
                 text-transform:uppercase;
-                font-size: 1.2rem; //1.4rem
-                color:white;
-                font-family:$font-family-secondary;
+                color:$color-brand-green;
+                @include font-secondary-uppercase(){
+                    font-size:1.2rem; //1.4rem
+                    font-weight:bold;
+                }
             }
         }
     }

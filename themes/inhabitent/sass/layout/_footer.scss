@@ -1,3 +1,14 @@
 footer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    @include font-secondary-uppercase{
+        
+    }
     font-family:$font-family-secondary;
+    background-color:pink;
+    width:100%;
+    p{
+        text-align:center;
+    }
 }

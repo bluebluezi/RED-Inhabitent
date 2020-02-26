@@ -25,7 +25,7 @@ body{
 
 
 
-.hero-banner{
+.about-hero-banner{
     width:100%;
     height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
     background-size: 100% auto;
@@ -33,10 +33,12 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: $spacing-unit-base;
 
     p{
         font-size:4vw;
         width:100%;
+        margin:0;
         @include font-secondary-uppercase(){
             font-weight: bold;
         }
@@ -58,13 +60,15 @@ h2{
     margin-bottom:$spacing-unit-base;
 }
 
+// .page-id-14 h2:first-child{
+//     margin-top:3rem; //2 spacing units
+// }
+
 p{
     font-size:1.25rem;
     color:$font-color-base;
-    font-weight:medium;
     text-align:left;
     width:66%;
     line-height:$line-height-base;
-    margin-bottom:$spacing-unit-base;
 }
 
