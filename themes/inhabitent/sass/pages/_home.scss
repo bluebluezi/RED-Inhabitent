@@ -8,22 +8,24 @@ body {
     justify-content:center;
     align-items:center;
     position:relative;
-
-      
-
     width:100%;
     height:calc(100vw / 2); //set aspect ratio of the image wrapper
-    img{
+    min-height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4));
+
+
+    .wp-post-image{
         width:100%;
         height:auto;
         max-height:100%;
         object-fit:cover;
+        z-index:-1;
     }
     .full-logo{
         position:absolute;
         width:25vw;
         height:25vw;
-        z-index:3;
+        z-index:2;
     }
 
 }

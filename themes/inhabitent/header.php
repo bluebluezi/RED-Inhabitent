@@ -20,6 +20,12 @@
             'theme_location' => 'primary'
         ));?>
     </nav>
+
+    <!-- <nav class="<?php echo is_page(array('About', 'Home')) ? 'transparent' : 'opaque' ;?>">
+    <?php wp_nav_menu(array(
+        'theme_location' => 'main'
+    )) ;?>
+</nav> -->
     <div class="search-wrapper">
     <i class="fas fa-search fa-1x"></i>
     </div>
