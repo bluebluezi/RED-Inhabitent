@@ -158,7 +158,7 @@ header {
         color: #248A83;
         font-family: "Novecento Sans Web";
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.5vw;
         font-weight: bold; }
 
 footer {
@@ -180,8 +180,21 @@ footer {
     text-align: center; }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
-  font-size: 2em; }
+  font-size: 2em;
+  overflow-x: hidden; }
 
 .home-hero-banner {
   display: -webkit-box;
@@ -201,7 +214,6 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4)); }
   .home-hero-banner .wp-post-image {
     width: 100%;
-    height: auto;
     max-height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -210,7 +222,33 @@ body {
     position: absolute;
     width: 25vw;
     height: 25vw;
+    min-width: 148.5px;
+    min-height: 148.5px;
     z-index: 2; }
+
+.shop-categories-wrapper {
+  width: 90%;
+  height: 30vw;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-auto-flow: column;
+  grid-gap: 5%; }
+  .shop-categories-wrapper .shop-categories {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 1, 1, 0.4)));
+    background: linear-gradient(rgba(0, 1, 1, 0.4));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%; }
+  .shop-categories-wrapper img {
+    height: auto;
+    width: 50%; }
 
 header {
   color: white; }
@@ -237,7 +275,7 @@ body {
 .about-hero-banner {
   width: 100%;
   height: calc(100vw / 1.5);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;

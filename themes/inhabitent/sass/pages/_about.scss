@@ -28,7 +28,7 @@ body{
 .about-hero-banner{
     width:100%;
     height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat:no-repeat;
     display:flex;
     justify-content: center;

@@ -1,6 +1,11 @@
 body {
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
     background: white;
     font-size: 2em;
+    overflow-x:hidden;
 }
 
 .home-hero-banner{
@@ -16,7 +21,6 @@ body {
 
     .wp-post-image{
         width:100%;
-        height:auto;
         max-height:100%;
         object-fit:cover;
         z-index:-1;
@@ -25,8 +29,38 @@ body {
         position:absolute;
         width:25vw;
         height:25vw;
+        min-width:148.5px; //based on screen size of an iphone 5/SE's 25vw;
+        min-height:148.5px;
         z-index:2;
     }
 
+}
+
+.shop-categories-wrapper{
+
+    width:90%;
+    height:30vw;
+    display:grid;
+    grid-template-columns: repeat(4,20%); //do eat sleep wear
+    grid-auto-flow: column;
+    grid-gap: 5%;//automatically place items in columns starting with
+                            //implicit grid tracks
+
+    
+    .shop-categories{
+        background:linear-gradient(rgba(0,0.5,0.5,0.4));
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+ 
+
+    }
+    
+
+    img{
+      height: auto;
+      width:50%;  
+    }
 }
 
