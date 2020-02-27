@@ -39,7 +39,7 @@ body {
 .shop-categories-wrapper{
 
     width:90%;
-    height:30vw;
+    height:30vw; // might not need this as the wrapper height depends on content;
     display:grid;
     grid-template-columns: repeat(4,21.5%); //do eat sleep wear
     // grid-auto-flow: column;
@@ -50,11 +50,14 @@ body {
 
     
     .shop-categories{
-        background:linear-gradient(rgba(0,0.5,0.5,0.4));
+        // background:linear-gradient(rgba(0,0.5,0.5,0.4));
         display:flex;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
         width:100%;
+        border: 1px solid grey;
+        border-top: 7px solid grey;
  
 
     }
