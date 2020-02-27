@@ -27,13 +27,14 @@
 $terms = get_terms(array(
     'taxonomy' => 'product-type',
     'hide_empty' => false
-));
-?>
+));?>
 
-<?php
-echo "<p>";
-echo $term->name;
-echo "</p>";?>
+<!-- <?php
+print_r($terms);?> //this is used to print out $terms -->
+
+
+
+
 
 <section class="shop-categories-wrapper">
 
@@ -42,15 +43,23 @@ foreach($terms as $term) : ?>
     <div class="shop-categories">
 
     <?php
-    $file_name = $term->name . '.svg';
-    // echo "<p>";
-    // echo $term->name;
-    // echo "</p>";?>
+        $file_name = $term->name . '.svg';
+    ?>
 
     <img src='<?php echo get_template_directory_uri() . "/assets/images/product-type-icons/$file_name"?>'>
+    <?php $descriptions = $term->description;
+        echo "<p>";
+        echo $descriptions;
+        echo "</p>";
+    ?>
+
+    <!-- add button here -->
+    
 
     </div>
 <?php endforeach;?>
+
+
 
 </section>
 
