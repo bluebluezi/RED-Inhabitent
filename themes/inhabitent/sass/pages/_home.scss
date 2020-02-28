@@ -45,25 +45,41 @@ body {
     // grid-auto-flow: column;
     grid-column-gap: 4.66%;//automatically place items in columns starting with
                             //implicit grid tracks
-    box-sizing:border-box;
+    font-size:$font-size-base;
     
 
     
     .shop-categories{
         // background:linear-gradient(rgba(0,0.5,0.5,0.4));
         display:flex;
+        box-sizing:border-box;
         flex-direction:column;
-        justify-content:center;
         align-items:center;
         width:100%;
-        border: 1px solid grey;
-        border-top: 7px solid grey;
+        border: 1px solid $color-brand-light-grey;
+        border-top: 7px solid $color-brand-light-grey;
+        padding:1em;
+        
+        img{
+            // margin: $spacing-unit-base 0 $spacing-unit-base 0;
+            height: auto;
+            width:33%;  
+          }
+
+        p{
+            display:flex;
+            flex: 1;
+            font-size:1.25vw;
+            margin: $spacing-unit-base 0 $spacing-unit-base 0;
+            width:100%; //might not be needed if we change about's p styling at the bottom of page
+            text-align:center; //same as above
+            // padding: $spacing-unit-base;
+        }
+        
+        
     }
     
 
-    img{
-      height: auto;
-      width:33%;  
-    }
+
 }
 
