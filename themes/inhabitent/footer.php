@@ -5,7 +5,14 @@
 
 
 <footer>
-    <p>COPYRIGHT &copy 2020 INHABITENT</p>
+    <?php get_sidebar('footer');?>
+    <div class ="footer-logo-wrapper">
+        <img src='<?php echo get_template_directory_uri() . "/assets/images/logos/inhabitent-logo-text-dark.svg"?>'>
+    
+    </div>
+
+    <p>copyright &copy 2020 inhabitent</p>
+
 </footer>
 
 
