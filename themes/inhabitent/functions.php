@@ -1,10 +1,8 @@
 
 
 <?php
-//replaces original image upload limit
-@ini_set( 'upload_max_size' , '32M' );
-@ini_set( 'post_max_size', '32M');
-@ini_set( 'max_execution_time', '300' );
+
+
 //Adds script and stylesheets
 function inhabitant_files() {
     wp_enqueue_style('inhabitant_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());
@@ -82,7 +80,9 @@ function inhabitent_post_types(){
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'               => true, 
+        //this line puts the custom post type within edit not just quick edit
     );
     
 	register_taxonomy( 'product-type', array( 'product' ), $args ); //this is the registered taxonomy in WP, array specifies where it shows up
