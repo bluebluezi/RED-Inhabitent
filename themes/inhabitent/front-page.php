@@ -6,12 +6,12 @@
     while( have_posts() ) :
         the_post(); ?>
 
-    <div class="home-hero-banner">
+    <section class="home-hero-banner">
         <?php the_post_thumbnail('full');?>
     <img 
     class="full-logo"
     src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-full.svg">
-    </div>
+    </section>
     <?php the_content(); ?>
     
     <!-- Loop ends -->
@@ -32,53 +32,64 @@ $terms = get_terms(array(
 <!-- <?php
 print_r($terms);?> //this is used to print out $terms -->
 
+<section class="shop-categories">
+    <h2>SHOP STUFF</h2>
+
+    <?php foreach($terms as $term) : ?>
+        <div class="shop-categories-cell">
+
+            <?php
+                $file_name = $term->name . '.svg';
+            ?>
+
+            <img src='<?php echo get_template_directory_uri() . "/assets/images/product-type-icons/$file_name"?>'>
+        
+            <?php $descriptions = $term->description;
+                echo "<p>";
+                echo $descriptions;
+                echo "</p>";
+            ?>
+            <!-- add button here -->
+        </div>
+    <?php endforeach;?>
+</section>
 
 
-
-
-<section class="shop-categories-wrapper">
-
-<?php
-foreach($terms as $term) : ?>
-    <div class="shop-categories">
-
+<section class="inhabitent-journal">
     <?php
-        $file_name = $term->name . '.svg';
-    ?>
+    $args = array( 
+        'post_type' => 'post', 
+        'order' => 'ASC',
+        'numberposts' => 3
+        );
+    $product_posts = get_posts( $args ); // returns an array of posts
 
-    <img src='<?php echo get_template_directory_uri() . "/assets/images/product-type-icons/$file_name"?>'>
-    <?php $descriptions = $term->description;
-        echo "<p>";
-        echo $descriptions;
-        echo "</p>";
     ?>
-
-    <!-- add button here -->
+    <?php foreach ( $product_posts as $post ) : setup_postdata( $post );?>
     
 
+        <div class="journal-cell">
+
+            <?php the_post_thumbnail() ?> 
+
+            <?php 
+                $postDateRaw = $post->post_date;
+                $postDate= date('t F Y', strtotime($postDateRaw));
+                $commentCount = $post->comment_count;
+                echo "<p>";
+                echo $postDate . " / " . $commentCount . " Comments";
+                echo "</p>";
+            ?>    
+
+            <h3><?php the_title() ?></h3>
+
     </div>
-<?php endforeach;?>
-
-
-
+    <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
 
 <!-- Custom Post Loop Starts -->
-<?php
-   $args = array( 
-       'post_type' => 'post', 
-       'order' => 'ASC',
-       'numberposts' => 3
-    );
-   $product_posts = get_posts( $args ); // returns an array of posts
 
-?>
-<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-   <?php the_title() ?>
-   <?php the_post_thumbnail() ?>
-  
-<?php endforeach; wp_reset_postdata(); ?>
 
     
 <?php get_footer();?>
