@@ -37,9 +37,9 @@ function inhabitent_widgets(){
         'name' => 'Footer',
         'id' => 'footer-area',
         'description' => 'Drag and drop appropriate widgets for the footer',
-        'before_widget' => '<div id="%1$s>',
+        'before_widget' => '<div id="%1$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class = "footer-headings>',
+        'before_title' => '<h2 class = "footer-headings">',
         'after_title' => '</h2>'
     ));
 }
