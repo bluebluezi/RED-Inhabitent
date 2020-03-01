@@ -1,3 +1,3 @@
 <section class="sidebar">
-    <?php dynamic_sidebar('footer-widget-area');?>
+    <?php dynamic_sidebar('footer-area');?>
 </section>
