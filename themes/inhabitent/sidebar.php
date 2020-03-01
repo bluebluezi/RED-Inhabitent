@@ -1,3 +1,3 @@
 <section class="sidebar">
-    <?php dynamic_sidebar('sidebar-info');?>
+    <?php dynamic_sidebar('default-sidebar-area');?>
 </section>
