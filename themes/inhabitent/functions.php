@@ -25,7 +25,7 @@ add_action('after_setup_theme', 'inhabitant_features');
 function inhabitent_widgets(){
     register_sidebar(array(   //this is an associative array
         'name' => 'Sidebar Info',
-        'id' => 'sidebar-info',
+        'id' => 'default-sidebar-area',
         'description' => 'Add a text block with your business hours',
         'before_widget' => '<aside id="%1$s">',
         'after_widget' => '</aside>',
@@ -35,7 +35,7 @@ function inhabitent_widgets(){
 
     register_sidebar(array(
         'name' => 'Footer',
-        'id' => 'footer-wrapper',
+        'id' => 'footer-area',
         'description' => 'Drag and drop appropriate widgets for the footer',
         'before_widget' => '<div id="%1$s>',
         'after_widget' => '</div>',
