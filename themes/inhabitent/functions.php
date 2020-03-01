@@ -29,7 +29,17 @@ function inhabitent_widgets(){
         'description' => 'Add a text block with your business hours',
         'before_widget' => '<aside id="%1$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h2 class = "widget-hours">',
+        'before_title' => '<h2 class = "sidebar-headings">',
+        'after_title' => '</h2>'
+    ));
+
+    register_sidebar(array(
+        'name' => 'Footer',
+        'id' => 'footer-wrapper',
+        'description' => 'Drag and drop appropriate widgets for the footer',
+        'before_widget' => '<div id="%1$s>',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class = "footer-headings>',
         'after_title' => '</h2>'
     ));
 }
