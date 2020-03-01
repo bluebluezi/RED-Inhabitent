@@ -4,13 +4,12 @@
 </body>
 
 
-<footer>
+<footer style ="background-image: url('<?php echo get_template_directory_uri() . "/assets/images/dark-wood.png";?>')">
     <?php get_sidebar('footer');?>
     <div class ="footer-logo-wrapper">
-        <img src='<?php echo get_template_directory_uri() . "/assets/images/logos/inhabitent-logo-text-dark.svg"?>'>
+        <img src='<?php echo get_template_directory_uri() . "/assets/images/logos/inhabitent-logo-text-dark.svg";?>'>
     
     </div>
-
     <p>copyright &copy 2020 inhabitent</p>
 
 </footer>
