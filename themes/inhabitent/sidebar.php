@@ -1,3 +1,3 @@
-<div class="sidebar">
+<section class="sidebar">
     <?php dynamic_sidebar('sidebar-info');?>
-</div>
+</section>
