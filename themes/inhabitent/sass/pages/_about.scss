@@ -3,9 +3,6 @@ header{
     color:white;
 }
 
-
-
-
 body{
     position:relative;
     display:flex;
@@ -18,13 +15,9 @@ body{
     font-family: $font-family-primary;
     color: $font-color-base;
 }
-
 // h3{
 //     display:none;
 // }
-
-
-
 .about-hero-banner{
     width:100%;
     height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
