@@ -36,7 +36,7 @@ print_r($terms);?> //this is used to print out $terms -->
     <h2>SHOP STUFF</h2>
 
     <?php foreach($terms as $term) : ?>
-        <div class="shop-categories-cell">
+        <figure class="shop-categories-cell">
 
             <?php
                 $file_name = $term->name . '.svg';
@@ -50,7 +50,7 @@ print_r($terms);?> //this is used to print out $terms -->
                 echo "</p>";
             ?>
             <!-- add button here -->
-        </div>
+        </figure>
     <?php endforeach;?>
 </section>
 
@@ -82,6 +82,7 @@ print_r($terms);?> //this is used to print out $terms -->
             ?>    
 
             <h3><?php the_title() ?></h3>
+            <!-- add button here -->
 
     </div>
     <?php endforeach; wp_reset_postdata(); ?>
