@@ -34,20 +34,20 @@ body {
         z-index:2;
     }
 
-    margin-bottom:$spacing-unit-base;
-
 }
 
-.shop-categories-wrapper{
+.shop-categories{
     margin-top:$spacing-unit-base;
     width:90%;
     // height:30vw; // might not need this as the wrapper height depends on content;
     display:grid;
     grid-template-columns: repeat(4,21.5%); //do eat sleep wear
-    grid-template-rows: 2.5rem auto ;
+    grid-template-rows:  auto ;
     // grid-auto-flow: column;
     grid-column-gap: 4.66%;//automatically place items in columns starting with
     grid-row-gap: $spacing-unit-base;                            //implicit grid tracks
+
+    grid-row-gap:$spacing-unit-base;
     font-size:$font-size-base;
 
     h2{
@@ -85,12 +85,30 @@ body {
             width:100%; //might not be needed if we change about's p styling at the bottom of page
             text-align:center; //same as above
             // padding: $spacing-unit-base;
+        }   
+    }
+}
+
+.inhabitent-journal{
+    display:grid;
+    width:90%;
+    grid-template-columns: repeat(3,30%);
+    grid-column-gap:5%;
+
+    .journal-cell{
+        display:flex;
+        img{
+            width:100%;
+            height:auto;
+            object-fit: cover;
         }
-        
-        
+        h3{
+            color:$color-brand-green;
+        }
     }
     
-
+    
 
 }
+
 
