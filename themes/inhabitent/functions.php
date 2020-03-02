@@ -27,7 +27,7 @@ function inhabitent_widgets(){
         'name' => 'Sidebar Info',
         'id' => 'default-sidebar-area',
         'description' => 'Add a text block with your business hours',
-        'before_widget' => '<aside id="%1$s">',
+        'before_widget' => '<aside class="%1$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h2 class = "sidebar-headings">',
         'after_title' => '</h2>'
@@ -37,7 +37,7 @@ function inhabitent_widgets(){
         'name' => 'Footer',
         'id' => 'footer-area',
         'description' => 'Drag and drop appropriate widgets for the footer',
-        'before_widget' => '<div id="%1$s">',
+        'before_widget' => '<div class="%1$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class = "footer-headings">',
         'after_title' => '</h2>'
