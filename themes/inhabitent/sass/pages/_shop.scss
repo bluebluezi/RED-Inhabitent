@@ -1,7 +1,8 @@
 h1{
     @include font-secondary-uppercase{
-        font-size:3rem;
+        font-size:2.75rem;
         font-weight:bold;
+        letter-spacing:0.05em;
     }
     margin-top:16vh; //2*height of header
     margin-bottom:1em;
@@ -18,7 +19,7 @@ h1{
             text-decoration:none;
             text-align:center;
             @include font-secondary-uppercase{
-                font-size:1rem;
+                font-size:1.5rem;
                 color:$color-brand-green;
             }
         }
@@ -27,17 +28,19 @@ h1{
 
 .all-products{
     display:grid;
-    width:90%;
-    grid-template-columns:repeat(4,22vw);
-    column-gap:3vw;
-    row-gap:3vw;
+    width:100%;
+    grid-template-columns:repeat(4,20vw);
+    column-gap:3.3vw;
+    row-gap:3.3vw;
+    padding-left:5vw;
+    padding-right:5vw;
 
     .product-cell{
         width:100%;
 
         .product-img-wrapper{
-            width:22vw;
-            height:22vw;
+            width:20vw;
+            height:20vw;
 
             img{
                 width:100%;
