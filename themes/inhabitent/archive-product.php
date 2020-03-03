@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+?>
+
+    <h1>Shop Stuff</h1>
 
     <nav class ="product-categories">
         <?php wp_nav_menu(array(
