@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+    <nav class ="product-categories">
+        <?php wp_nav_menu(array(
+            'theme_location' => 'producttype'
+        ));?>
+    </nav>
+
 <!--this queries items that are 'product' and limits the post 
 to 16 products per page for the query-->
 <?php query_posts(array(  
@@ -18,9 +24,11 @@ to 16 products per page for the query-->
             <?php echo the_post_thumbnail();?>
         </div>
         <figcaption class="product-cell-text">
-            <p><?php the_title(); ?></p>
-            <p class="product-cell-placeholder">............................................................</p>
-            <p><?php echo '$' . get_field('price');?></p>
+            <span class="product-name"><?php the_title(); ?></span>
+            <span class="product-price"><?php echo '$' . get_field('price');?></span>
+            <p class="product-cell-placeholder">
+                ......................................................
+            </p>
             
             
         </figcaption>
