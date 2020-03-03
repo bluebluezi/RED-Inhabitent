@@ -54,6 +54,9 @@ h1{
             line-height:$line-height-base;
             position:relative;
             width:100%;
+            border:$border-solid;
+            border-top-width:7px;
+            height:3rem;
 
             .product-name{
                 position:absolute;
