@@ -16,7 +16,8 @@ function inhabitant_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     register_nav_menus(array(
-        'primary' => 'Main Menu'
+        'primary' => 'Main Menu',
+        'producttype' => 'Product Categories'
     ));
 }
 
