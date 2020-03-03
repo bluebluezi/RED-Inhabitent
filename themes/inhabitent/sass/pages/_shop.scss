@@ -51,6 +51,8 @@ h1{
         }
 
         .product-cell-text{
+            display:flex;
+            align-items:center;
             line-height:$line-height-base;
             position:relative;
             width:100%;
