@@ -28,19 +28,20 @@ h1{
 
 .all-products{
     display:grid;
-    width:100%;
-    grid-template-columns:repeat(4,20vw);
-    column-gap:3.3vw;
-    row-gap:3.3vw;
-    padding-left:5vw;
-    padding-right:5vw;
+    width:85%;
+    grid-template-columns:repeat(4,19vw);
+    column-gap:3vw;
+    row-gap:3vw;
+    padding-top:3rem;
+    border:$border-dashed;
+    border-width: 1px 0 0 0;
 
     .product-cell{
         width:100%;
 
         .product-img-wrapper{
-            width:20vw;
-            height:20vw;
+            width:19vw;
+            height:19vw;
 
             img{
                 width:100%;
@@ -58,7 +59,7 @@ h1{
             width:100%;
             border:$border-solid;
             border-top-width:7px;
-            height:3rem;
+            height:4.5rem;
 
             .product-name{
                 position:absolute;
