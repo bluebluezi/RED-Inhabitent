@@ -7,6 +7,24 @@ h1{
     margin-bottom:1em;
 }
 
+.product-categories{
+    width:30%;
+    margin-bottom:3rem; //same size as SHOPSTUFF font size;
+    ul{
+        display:flex;
+        justify-content:space-evenly;
+
+        a{
+            text-decoration:none;
+            text-align:center;
+            @include font-secondary-uppercase{
+                font-size:1rem;
+                color:$color-brand-green;
+            }
+        }
+    }
+}
+
 .all-products{
     display:grid;
     width:90%;
