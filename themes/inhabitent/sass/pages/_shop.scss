@@ -33,8 +33,10 @@ h1{
     column-gap:3vw;
     row-gap:3vw;
     padding-top:3rem;
+    padding-bottom:7.5rem;
     border:$border-dashed;
     border-width: 1px 0 0 0;
+
 
     .product-cell{
         width:100%;
@@ -60,7 +62,7 @@ h1{
             position:relative;
             width:100%;
  
-            border-top:7px solid $e1e1e1;
+            border-top:7px solid #e1e1e1;
             height:4.5rem;
 
             .product-name{
