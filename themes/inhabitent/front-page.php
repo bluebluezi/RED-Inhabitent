@@ -68,7 +68,7 @@ print_r($terms);?> //this is used to print out $terms -->
     <?php foreach ( $product_posts as $post ) : setup_postdata( $post );?>
     
 
-        <div class="journal-cell">
+        <figure class="journal-cell">
 
             <?php the_post_thumbnail() ?> 
 
@@ -84,7 +84,7 @@ print_r($terms);?> //this is used to print out $terms -->
             <h3><?php the_title() ?></h3>
             <!-- add button here -->
 
-    </div>
+        </figure>
     <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
