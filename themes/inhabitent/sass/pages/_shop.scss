@@ -19,5 +19,30 @@
     
             }
         }
-    
+
+        .product-cell-text{
+            line-height:$line-height-base;
+            position:relative;
+            width:100%;
+
+            .product-name{
+                position:absolute;
+                left:$spacing-unit-base;
+                background-color:white;
+                z-index:3;
+            }
+            .product-price{
+                position:absolute;
+                right:$spacing-unit-base;
+                background-color:white;
+                z-index:3;
+            }
+            .product-cell-placeholder{
+                position:absolute;
+                width:100%;
+                text-align:center;
+                overflow:hidden;
+            }
+        }
+    }   
 }
