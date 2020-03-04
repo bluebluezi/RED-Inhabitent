@@ -1,0 +1,16 @@
+.blog-post-index-wrapper{
+    display:grid;
+    grid-template-columns: 70vw 30vw;  
+    width:100%;
+    
+    .blog-post-index-content{
+        grid-column: 1 / 2;
+    }
+
+    .sidebar{
+        grid-column: 2 / 3;
+    }
+}
+
+
+
