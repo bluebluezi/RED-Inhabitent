@@ -5,9 +5,29 @@
     
     .blog-post-index-content{
         grid-column: 1 / 2;
+        margin-top:8vh; //height of header
+        padding:3rem;
+
+        
+        .blog-post{
+            width:100%;
+
+            .post-image-wrapper{
+                width:100%;
+
+                img{
+                    width:100%;
+                    height:100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
     }
 
     .sidebar{
+        margin-top:8vh; //height of header
+        padding:3rem;
         grid-column: 2 / 3;
     }
 }
