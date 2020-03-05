@@ -12,38 +12,68 @@
         
         .blog-post{
             width:100%;
+            margin-bottom:3rem;
 
             .post-image-wrapper{
+                position:relative;
                 width:100%;
 
                 img{
                     width:100%;
-                    height:100%;
+                    height:100% !important;
                     object-fit: cover;
                 }
-            }
 
-            .post-title-wrapper{
-                width:75%;
-                
-                h2{
-                    color:white;
-                    background-color:$color-brand-green;
-                    line-height:$line-height-base;
-                    padding-left:$spacing-unit-base;
+                .post-title-wrapper{
+                    position:absolute;
+                    top:$spacing-unit-base;
+                    left:0;
+                    width:75%;
+                    
+                    h2{
+                        color:white;
+                        background-color:$color-brand-green;
+                        line-height:$line-height-base;
+                        padding-left:$spacing-unit-base;
+                    }
+                }
+
+                .post-info-wrapper{
+                    width:50%;
+                    position:absolute;
+                    right:0;
+                    bottom:2px; //magic numbers
+                    p{
+                        color:white;
+                        background-color:$color-brand-green;
+                        line-height:$line-height-base;
+                        padding-left:$spacing-unit-base;
+                    }
                 }
             }
 
-            .post-info-wrapper{
-                width:50%;
-
-                p{
-                    color:white;
-                    background-color:$color-brand-green;
-                    line-height:$line-height-base;
-                    padding-left:$spacing-unit-base;  
-                }
+            .blog-post-content{
+                line-height:$line-height-base;
+                margin: $spacing-unit-base 0;
             }
+
+            .post-button{
+                display:inline-block;
+                border: 1px solid black;
+                line-height:$spacing-unit-base;
+                font-size:1rem;
+                padding:1rem 2rem;
+                text-decoration:none;
+                color:black;
+                @include font-secondary-uppercase();
+            }
+
+
+
+
+
+           
+            
         }
 
     }
