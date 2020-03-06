@@ -42,15 +42,18 @@
                 }
 
                 .post-info-wrapper{
-                    width:50%;
+                    min-width:50%;
                     position:absolute;
                     right:0;
                     bottom:2px; //magic numbers
                     p{
+                        font-size:1rem;
                         color:white;
+                        text-align:center;
                         background-color:$color-brand-green;
                         line-height:$line-height-base;
-                        padding-left:$spacing-unit-base;
+                        padding: 0 $spacing-unit-base;
+                        @include font-secondary-uppercase();
                     }
                 }
             }
