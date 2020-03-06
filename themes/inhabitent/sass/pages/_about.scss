@@ -1,47 +1,53 @@
 
-header{
-    color:white;
-}
-
-body{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    min-height:100vh;
-    height:auto;
-    width:100vw;
-    font-size: $font-size-base;
-    font-family: $font-family-primary;
-    color: $font-color-base;
-}
-// h3{
-//     display:none;
-// }
 .about-hero-banner{
-    width:100%;
-    height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
-    background-size: cover;
-    background-repeat:no-repeat;
     display:flex;
     justify-content: center;
     align-items: center;
+    width:100vw;
+    height: calc(100vw / 1.5); //original image aspect ratio is approximately 1.5:1
+    background-image: linear-gradient(rgba(0,0,0,0.4));
+    background-size:cover;
+    min-height:100vh;
+    position:relative;
+
     margin-bottom: $spacing-unit-base;
 
-    p{
-        font-size:4vw;
-        width:100%;
-        margin:0;
-        @include font-secondary-uppercase(){
-            font-weight: bold;
+        .wp-post-image{
+            position:absolute;
+            width:100%;
+            height:auto;
+            max-height:100%;
+            object-fit:cover;
+            z-index:-1;
         }
+        h2{
+            display:inline;
+            color:white;
+            z-index:2;
+            font-size:4rem;
+        }
+    
     }
+
+
+
+
+
+
+    // p{
+    //     font-size:4vw;
+    //     width:100%;
+    //     margin:0;
+    //     @include font-secondary-uppercase(){
+    //         font-weight: bold;
+    //     }
+    // }
     // padding-top: 56.25%;   //16:9 aspect ratio
 
     // &:before{
     //     background-image: linear-gradiant(to bottom, rgba(0,0,0,1) rgba(0,0,0,0.5));
     // }
-}
+
 
 h2{
     font-size:2.5rem;

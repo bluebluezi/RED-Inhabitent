@@ -9,10 +9,13 @@
              style = "background-image: url(<?php echo get_the_post_thumbnail_url();?>);
                      width:100%; height:500px;">
         </div> -->
-    <!-- <h2><?php the_title(); ?></h2>
-    <h3><?php the_permalink();?></h3> -->
-
-
+    <section class= "about-hero-banner">    
+        <?php the_post_thumbnail('full');?>
+        <h2><?php the_title(); ?></h2>
+    
+    </section>
+    <!-- <h3><?php the_permalink();?></h3> -->
+    
     <?php the_content(); ?>
     
     <!-- Loop ends -->
