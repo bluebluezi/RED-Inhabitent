@@ -10,7 +10,7 @@
     min-height:100vh;
     position:relative;
 
-    margin-bottom: $spacing-unit-base;
+    margin-bottom: 3rem;
 
         .wp-post-image{
             position:absolute;
@@ -22,6 +22,9 @@
         }
         h2{
             display:inline;
+            @include font-secondary-uppercase(){
+                font-weight:bold;
+            };
             color:white;
             z-index:2;
             font-size:4rem;
@@ -29,6 +32,41 @@
     
     }
 
+.about-content{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    .about-content-container{
+        width:65%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+
+        & * {
+            margin-bottom:$spacing-unit-base;
+        }
+
+        h2{
+            font-size:2.5rem;
+            @include font-secondary-uppercase(){
+                font-weight:bold;
+                color:$color-brand-purple;
+            }
+        }
+        
+        // .page-id-14 h2:first-child{
+        //     margin-top:3rem; //2 spacing units
+        // }
+        
+        p{
+            font-size:1.5rem;
+            line-height:1.5em;
+        }
+    }
+}
 
 
 
@@ -49,23 +87,7 @@
     // }
 
 
-h2{
-    font-size:2.5rem;
-    @include font-secondary-uppercase(){
-        font-weight:bold;
-        color:$color-brand-purple;
-    }
 
-    margin-bottom:$spacing-unit-base;
-}
-
-// .page-id-14 h2:first-child{
-//     margin-top:3rem; //2 spacing units
-// }
-
-p{
-    line-height:$line-height-base;
-}
 // p{
 //     font-size:1.25rem;
 //     color:$font-color-base;

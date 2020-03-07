@@ -15,13 +15,16 @@
     
     </section>
     <!-- <h3><?php the_permalink();?></h3> -->
-    
-    <?php the_content(); ?>
-    
+
+    <section class="about-content">
+        <div class ="about-content-container">
+            <?php the_content(); ?>
+        </div>
+    </section>
     <!-- Loop ends -->
     <?php endwhile;?>
 
-    <?php the_posts_navigation();?>
+
 
 <?php else : ?>
         <p>No posts found</p>
