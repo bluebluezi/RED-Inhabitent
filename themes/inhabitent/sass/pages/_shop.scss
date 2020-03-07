@@ -74,20 +74,24 @@
                 line-height:$line-height-base;
                 position:relative;
                 width:100%;
-                font-size:1.1rem;
+                font-size:1.25rem;
+                overflow:hidden;
     
                 border-top:7px solid #e1e1e1;
                 height:4.5rem;
 
                 .product-name{
+                    box-sizing:content-box;
                     position:absolute;
-                    left:$spacing-unit-base;
+                    padding-left:1em;
                     background-color:white;
                     z-index:3;
                 }
                 .product-price{
+                    box-sizing:content-box;
                     position:absolute;
-                    right:$spacing-unit-base;
+                    right:0;
+                    padding-right:1em;
                     background-color:white;
                     z-index:3;
                 }
@@ -95,7 +99,6 @@
                     position:absolute;
                     width:100%;
                     text-align:center;
-                    overflow:hidden;
                 }
             }
         }
