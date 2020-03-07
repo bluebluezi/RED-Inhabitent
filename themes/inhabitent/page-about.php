@@ -17,7 +17,7 @@
     <!-- <h3><?php the_permalink();?></h3> -->
 
     <section class="about-content">
-        <div class ="about-content-container">
+        <div class="about-content-container">
             <?php the_content(); ?>
         </div>
     </section>
