@@ -1,6 +1,8 @@
 <?php get_header();
 ?>
 
+    <section class="product-archive-secondary-header">
+
     <h1>Shop Stuff</h1>
 
     <nav class ="product-categories">
@@ -8,6 +10,7 @@
             'theme_location' => 'producttype'
         ));?>
     </nav>
+    </section>
 
 <!--this queries items that are 'product' and limits the post 
 to 16 products per page for the query-->
