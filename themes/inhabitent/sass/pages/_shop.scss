@@ -1,87 +1,102 @@
-h1{
-    @include font-secondary-uppercase{
-        font-size:2.75rem;
-        font-weight:bold;
-        letter-spacing:0.05em;
-    }
-    margin-top:16vh; //2*height of header
-    margin-bottom:1em;
-}
-
-.product-categories{
-    width:30%;
-    margin-bottom:3rem; //same size as SHOPSTUFF font size;
-    ul{
-        display:flex;
-        justify-content:space-evenly;
-
-        a{
-            text-decoration:none;
+.product-archive-secondary-header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:space-between;
+    h1{
+            flex-basis:100%;
             text-align:center;
-            @include font-secondary-uppercase{
-                font-size:1.5rem;
-                color:$color-brand-green;
+        @include font-secondary-uppercase{
+            font-size:2.75rem;
+            font-weight:bold;
+            letter-spacing:0.05em;
+        }
+        margin-top:16vh; //2*height of header
+        margin-bottom:1em;
+    }
+    .product-categories{
+        width:30%;
+        margin-bottom:3rem; //same size as SHOPSTUFF font size;
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+    
+            a{
+                text-decoration:none;
+                text-align:center;
+                @include font-secondary-uppercase{
+                    font-size:1.5rem;
+                    color:$color-brand-green;
+                }
             }
         }
     }
 }
+
+
+
 
 .all-products{
-    display:grid;
-    width:85%;
-    grid-template-columns:repeat(4,19vw);
-    column-gap:3vw;
-    row-gap:3vw;
-    padding-top:3rem;
-    padding-bottom:7.5rem;
-    border:$border-dashed;
-    border-width: 1px 0 0 0;
+    display:flex;
+    justify-content:center;
+    .all-products-container{
+        display:grid;
+        width:85%;
+        grid-template-columns:repeat(4,19vw);
+        column-gap:3vw;
+        row-gap:3vw;
+        padding-top:3rem;
+        padding-bottom:7.5rem;
+        border:$border-dashed;
+        border-width: 1px 0 0 0;
 
 
-    .product-cell{
-        width:100%;
-        border:$border-solid;
-
-        .product-img-wrapper{
-            width: calc(19vw - 2px) ;
-            height:calc(19vw - 2px) ;
-            
-
-            img{
-                width:100%;
-                height:100%;
-                object-fit:cover;
-    
-            }
-        }
-
-        .product-cell-text{
-            display:flex;
-            align-items:center;
-            line-height:$line-height-base;
-            position:relative;
+        .product-cell{
             width:100%;
- 
-            border-top:7px solid #e1e1e1;
-            height:4.5rem;
+            border:$border-solid;
 
-            .product-name{
-                position:absolute;
-                left:$spacing-unit-base;
-                background-color:white;
-                z-index:3;
+            .product-img-wrapper{
+                width: calc(19vw - 2px) ;
+                height:calc(19vw - 2px) ;
+                
+
+                img{
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+        
+                }
             }
-            .product-price{
-                position:absolute;
-                right:$spacing-unit-base;
-                background-color:white;
-                z-index:3;
-            }
-            .product-cell-placeholder{
-                position:absolute;
+
+            .product-cell-text{
+                display:flex;
+                align-items:center;
+                line-height:$line-height-base;
+                position:relative;
                 width:100%;
-                text-align:center;
-                overflow:hidden;
+                font-size:1.1rem;
+    
+                border-top:7px solid #e1e1e1;
+                height:4.5rem;
+
+                .product-name{
+                    position:absolute;
+                    left:$spacing-unit-base;
+                    background-color:white;
+                    z-index:3;
+                }
+                .product-price{
+                    position:absolute;
+                    right:$spacing-unit-base;
+                    background-color:white;
+                    z-index:3;
+                }
+                .product-cell-placeholder{
+                    position:absolute;
+                    width:100%;
+                    text-align:center;
+                    overflow:hidden;
+                }
             }
         }
     }   
