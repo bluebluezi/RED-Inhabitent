@@ -9,6 +9,7 @@
         $('.search-toggle').on('click', function (event) {
             event.preventDefault();
             const $label = $(this).siblings('label');
+            console.log($label);
             $label.animate({ width: 'toggle' });
             $label.children('[type="search"]').focus();
         });
