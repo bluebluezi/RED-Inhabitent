@@ -3,11 +3,11 @@
 <?php if( have_posts() ) :
 //The WordPress Loop: loads post content 
 ?>
-<div class="blog-post-index-wrapper">
+<div class="blog-post-index-container">
     <section class="blog-post-index-content">
         <?php while( have_posts() ) : the_post();?>
         <figure class="blog-post">
-            <div class="post-image-wrapper">
+            <div class="post-image-container">
                 <?php echo the_post_thumbnail();?>
                 <div class="post-title-wrapper">
                     <h2><?php the_title(); ?></h2>
@@ -19,7 +19,7 @@
                     $commentCount = $post->comment_count;
                     $author = $post->post_author;
                     echo "<p>";
-                    echo $postDate . " / " . $commentCount . " Comments" . " " .
+                    echo $postDate . " / " . $commentCount . " Comments" . " / By " .
                         get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
                     echo "</p>";    
                 ?>
