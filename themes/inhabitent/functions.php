@@ -49,6 +49,23 @@ function inhabitent_widgets(){
 add_action('widgets_init', 'inhabitent_widgets');
 
 function inhabitent_post_types(){
+
+    register_post_type('adventure', array(
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'public' => true, //this make it show up as a menu item
+        'supports' => array('title','editor','thumbnail'),       
+        //^ states what we want to edit in post type (includes place to insert thumbnail)
+        'labels' => array(
+            'name' => 'Adventures',
+            'add_new_item' => 'Add New Adventure',
+            'edit_item' => 'Edit Adventure',
+            'all_items' => 'All Adventures',
+            'singular_name' => 'Adventure'
+        ),    
+        'menu_item' => 'dashicons-store'   
+    ));
+
     register_post_type('product', array(
         'has_archive' => true,
         'show_in_rest' => true,
@@ -98,8 +115,6 @@ function inhabitent_post_types(){
     );
     
 	register_taxonomy( 'product-type', array( 'product' ), $args ); //this is the registered taxonomy in WP, array specifies where it shows up
-
-    
 
 }
 
