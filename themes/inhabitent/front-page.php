@@ -12,6 +12,8 @@
     class="full-logo"
     src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-full.svg">
     </section>
+
+
     <?php the_content(); ?>
     
     <!-- Loop ends -->
@@ -68,28 +70,58 @@ print_r($terms);?> //this is used to print out $terms -->
     <?php foreach ( $product_posts as $post ) : setup_postdata( $post );?>
     
 
-        <figure class="journal-cell">
+    <figure class="journal-cell">
 
-            <?php the_post_thumbnail() ?> 
+        <?php the_post_thumbnail() ?> 
 
-            <?php 
-                $postDateRaw = $post->post_date;
-                $postDate= date('t F Y', strtotime($postDateRaw));
-                $commentCount = $post->comment_count;
-                echo "<p>";
-                echo $postDate . " / " . $commentCount . " Comments";
-                echo "</p>";
-            ?>    
+        <?php 
+            $postDateRaw = $post->post_date;
+            $postDate= date('t F Y', strtotime($postDateRaw));
+            $commentCount = $post->comment_count;
+            echo "<p>";
+            echo $postDate . " / " . $commentCount . " Comments";
+            echo "</p>";
+        ?>    
 
-            <h3><?php the_title() ?></h3>
-            <!-- add button here -->
+        <h3><?php the_title() ?></h3>
+        <!-- add button here -->
 
-        </figure>
+    </figure>
     <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
-
 <!-- Custom Post Loop Starts -->
+<section class="adventure-blogs">
+    <?php
+        $args = array( 
+            'post_type' => 'adventure', 
+            'order' => 'ASC',
+            'numberposts' => 4
+            );
+        $adventure_posts = get_posts( $args ); // returns an array of posts
+
+        ?>
+
+    <div class="adventure-blogs-container">
+        <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post );?>
+
+        <figure class="adventure-cell">
+            <?php the_post_thumbnail() ?>
+            <h3><?php the_title() ?></h3>
+            <!-- add button here -->
+            <a class="custom-posttype-button" href="<?php the_permalink();?>">
+                        Read More →
+            </a>
+        </figure>
+        <?php endforeach; wp_reset_postdata(); ?>
+        <a class="custom-posttype-button" href="<?php the_permalink();?>">
+            More Adventures
+            </a>
+    </div>
+
+
+
+</section>
 
 
     
