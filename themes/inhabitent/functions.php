@@ -44,6 +44,17 @@ function inhabitent_widgets(){
         'before_title' => '<h2 class = "footer-headings">',
         'after_title' => '</h2>'
     ));
+
+    register_sidebar(array(
+        'name' => '404',
+        'id' => '404-content-area',
+        'description' => 'Drag and drop appropriate widgets for the footer',
+        'before_widget' => '<div class="%1$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class = "404-headings">',
+        'after_title' => '</h2>'
+        
+    ));
 }
 
 add_action('widgets_init', 'inhabitent_widgets');
