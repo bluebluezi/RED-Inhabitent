@@ -33,74 +33,93 @@ body {
 }
 
 .shop-categories{
-    margin-top:$spacing-unit-base;
-    margin-bottom:$spacing-unit-base;
-    width:90%;
-    // height:30vw; // might not need this as the wrapper height depends on content;
-    display:grid;
-    grid-template-columns: repeat(4,21.5%); //do eat sleep wear
-    grid-template-rows:  auto ;
-    // grid-auto-flow: column;
-    grid-column-gap: 4.66%;//automatically place items in columns starting with
-    grid-row-gap: $spacing-unit-base;                            //implicit grid tracks
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 
-    grid-row-gap:$spacing-unit-base;
-    font-size:$font-size-base;
-
-    h2{
-
-        margin: 3rem 0;
-        grid-row: 1/ span 1;
-        grid-column:1/ span 4;
-        text-align:center;
-    }
-    
-    .shop-categories-cell{
-        grid-row:2 / span 1;
-        // background:linear-gradient(rgba(0,0.5,0.5,0.4));
-        display:flex;
-        box-sizing:border-box;
-        flex-direction:column;
-        align-items:center;
-        width:100%;
-        border: 1px solid $color-brand-light-grey;
-        border-top: 7px solid $color-brand-light-grey;
-        padding:1em;
+    .shop-categories-container{
         
-        img{
-            // margin: $spacing-unit-base 0 $spacing-unit-base 0;
-            height: auto;
-            width:33%;  
-          }
+        width:90%;
+        // height:30vw; // might not need this as the wrapper height depends on content;
+        display:grid;
+        grid-template-columns: repeat(4,21.5%); //do eat sleep wear
+        grid-template-rows:  auto ;
+        // grid-auto-flow: column;
+        grid-column-gap: 4.66%;//automatically place items in columns starting with
+        grid-row-gap: $spacing-unit-base;                            //implicit grid tracks
 
-        p{
+        grid-row-gap:$spacing-unit-base;
+        font-size:$font-size-base;
+
+        h2{
+
+            margin: 3rem 0;
+            grid-row: 1/ span 1;
+            grid-column:1/ span 4;
+            text-align:center;
+        }
+        
+        .shop-categories-cell{
+            grid-row:2 / span 1;
+            // background:linear-gradient(rgba(0,0.5,0.5,0.4));
             display:flex;
-            flex: 1;
-            font-size:1.25vw;
-            margin: $spacing-unit-base 0 $spacing-unit-base 0;
-            width:100%; //might not be needed if we change about's p styling at the bottom of page
-            text-align:center; //same as above
-            // padding: $spacing-unit-base;
-        }   
+            box-sizing:border-box;
+            flex-direction:column;
+            align-items:center;
+            width:100%;
+            border: 1px solid $color-brand-light-grey;
+            border-top: 7px solid $color-brand-light-grey;
+            padding:1em;
+            
+            img{
+                // margin: $spacing-unit-base 0 $spacing-unit-base 0;
+                height: auto;
+                width:33%;  
+            }
+
+            p{
+                display:flex;
+                flex: 1;
+                font-size:1.25vw;
+                margin: $spacing-unit-base 0 $spacing-unit-base 0;
+                width:100%; //might not be needed if we change about's p styling at the bottom of page
+                text-align:center; //same as above
+                // padding: $spacing-unit-base;
+            }   
+        }
     }
 }
 
-.inhabitent-journal{
-    display:grid;
-    width:90%;
-    grid-template-columns: repeat(3,30%);
-    grid-column-gap:5%;
+.journal{
+    width:100%;
+    display:flex; //make this a mixin and apply to all direct child div container
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    .journal-cell{
-        display:flex;
-        img{
-            width:100%;
-            height:auto;
-            object-fit: cover;
-        }
-        h3{
-            color:$color-brand-green;
-        }
+        .journal-container{
+        display:grid;
+        width:90%;
+        grid-template-columns: repeat(3,30%);
+        grid-template-rows: 25vw;
+        grid-column-gap:5%;
+
+            .journal-cell{
+                display:flex;
+                flex-direction:column;
+                height:100%;
+                width:100%;
+                img{
+                    width:100%;
+                    height:auto;
+                    object-fit: cover;
+                }
+                h3{
+                    color:$color-brand-green;
+                }
+            }
     }
 }
 
@@ -122,10 +141,10 @@ body {
     .adventure-blogs-container{
         width:90%;
         display:grid;
-        grid-template-columns: 48.3vw 22.5vw 22.5vw;
+        grid-template-columns: 48.3% 22.5% 22.5%;
         grid-template-rows: 22.5vw 22.5vw auto;
-        column-gap:3vw;
-        row-gap: 3vw;
+        column-gap:3.3%;
+        row-gap: 3.3vw;
 
         
         
