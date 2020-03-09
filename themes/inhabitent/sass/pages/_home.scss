@@ -32,7 +32,7 @@ body {
 
 }
 
-.shop-categories{
+.product-categories{
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -47,7 +47,7 @@ body {
         }
     }
 
-    .shop-categories-container{
+    .product-categories-container{
         
         width:85%;
         // height:30vw; // might not need this as the wrapper height depends on content;
@@ -69,7 +69,7 @@ body {
             text-align:center;
         }
         
-        .shop-categories-cell{
+        .product-categories-cell{
             grid-row:2 / span 1;
             // background:linear-gradient(rgba(0,0.5,0.5,0.4));
             display:flex;
@@ -87,7 +87,7 @@ body {
                 width:33%;  
             }
 
-            p{
+            &>p{
                 display:flex;
                 flex: 1;
                 font-size:1.25vw;
@@ -96,6 +96,20 @@ body {
                 text-align:center; //same as above
                 // padding: $spacing-unit-base;
             }   
+
+            .product-categories-button{
+                box-sizing:content-box;
+                text-decoration:none;
+                text-align:center;
+                background-color:$color-brand-green;
+                width:50%;
+                color:$color-background;
+                margin-bottom:3vw;
+                padding:0.75em;
+                @include font-secondary-uppercase(){
+                    font-size:1rem;
+                };
+            }
         }
     }
 }
