@@ -181,6 +181,8 @@ body {
         }
 
         figure{
+            background-image: linear-gradient(rgba(0,0,0,0.4));
+            background-size:cover;
             position:relative;
             img{
                 position:absolute;
