@@ -100,7 +100,7 @@ body {
     }
 }
 
-.journal{
+.inhabitent-journal{
     width:100%;
     display:flex; //make this a mixin and apply to all direct child div container
     flex-direction:column;
@@ -116,28 +116,61 @@ body {
         }
     }
 
-        .journal-container{
+        .inhabitent-journal-container{
         display:grid;
         width:85%;
         grid-template-columns: repeat(3,30%);
-        grid-template-rows: 25vw;
         grid-column-gap:5%;
 
-            .journal-cell{
+            .inhabitent-journal-cell{
                 display:flex;
                 flex-direction:column;
                 height:100%;
                 width:100%;
+                border: $border-solid;
+
                 img{
                     width:100%;
                     height:auto;
                     object-fit: cover;
                 }
-                h3{
-                    color:$color-brand-green;
+
+                .inhabitent-journal-cell-text{
+                    line-height:1.3;
+                    padding:1rem;    
+                    border-top: 7px solid #e1e1e1;            
+                    p{
+                        font-size:0.8rem;
+                    }
+
+                    h3{
+                        color:$color-brand-green;
+                        @include font-secondary-uppercase(){
+                            font-size:1.5rem;
+                            font-weight:bold;
+                        };
+
+                    }
                 }
+
+                .inhabitent-journal-button{
+                    width:45%;
+                    margin:0 0.85rem 0.85rem 0.85rem;
+                    padding:0.75em 1.25em;
+                    //maybe below is a reset
+                    text-align:center;
+                    text-decoration:none;
+                    color:black;
+                    border:1px solid black;
+                    line-height:$line-height-base;  
+                    @include font-secondary-uppercase();
+                    font-size:1rem;
+                }
+
             }
+
     }
+
 }
 
 .adventure-blogs{
