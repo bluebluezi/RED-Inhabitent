@@ -40,7 +40,8 @@ body {
     width:100%;
 
     h2{
-        font-size:2.5rem;
+        margin:4.5rem 0;
+        font-size:3rem;
         @include font-secondary-uppercase(){
             color:$color-brand-purple;
         }
@@ -48,7 +49,7 @@ body {
 
     .shop-categories-container{
         
-        width:90%;
+        width:85%;
         // height:30vw; // might not need this as the wrapper height depends on content;
         display:grid;
         grid-template-columns: repeat(4,21.5%); //do eat sleep wear
@@ -108,7 +109,8 @@ body {
 
     
     h2{
-        font-size:2.5rem;
+        margin:4.5rem 0;
+        font-size:3rem;
         @include font-secondary-uppercase(){
             color:$color-brand-purple;
         }
@@ -116,7 +118,7 @@ body {
 
         .journal-container{
         display:grid;
-        width:90%;
+        width:85%;
         grid-template-columns: repeat(3,30%);
         grid-template-rows: 25vw;
         grid-column-gap:5%;
@@ -146,39 +148,20 @@ body {
     align-items:center;
 
     h2{
-        font-size:2.5rem;
+        margin:4.5rem 0;
+        font-size:3rem;
         @include font-secondary-uppercase(){
             color:$color-brand-purple;
         }
     }
 
     .adventure-blogs-container{
-        width:90%;
+        width:85%;
         display:grid;
         grid-template-columns: 48.3% 22.5% 22.5%;
         grid-template-rows: 22.5vw 22.5vw auto;
         column-gap:3.3%;
         row-gap: 3.3vw;
-
-        
-        
-        figure:first-child{
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-        }
-        figure:nth-child(2){
-            grid-column: 2 / 4;
-            grid-row: 1 / span 1;
-        }
-        figure:nth-child(3){
-            grid-column: 2 / 3;
-            grid-row: 2 / span 1;
-        }
-        figure:nth-child(4){
-            grid-column: 3 / 4;
-            grid-row: 2/ span 1;
-
-        }
 
         figure{
             background-image: linear-gradient(rgba(0,0,0,0.4));
@@ -191,21 +174,83 @@ body {
                 height:100%;
                 object-fit: cover;
             }
-            h3{
-                color:$color-background;
-            }
-            a{
-                //maybe this is a reset
+            .custom-posttype-button{
+                margin:$spacing-unit-base;
+                padding:0.75em 1.25em;
+                //maybe below is a reset
                 text-decoration:none;
                 color:$color-background;
                 border:1px solid $color-background;
+                line-height:$line-height-base;  
+                @include font-secondary-uppercase();
+                font-size:1rem;
             }
         }
 
-        .custom-posttype-button{
+        figure:first-child{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+
+            h3{
+                font-family:$font-family-primary;
+                padding: $spacing-unit-base;
+                color:$color-background;
+                line-height:1.25; 
+                font-size:3.75rem;
+            }
+
+        }
+        figure:nth-child(2){
+            grid-column: 2 / 4;
+            grid-row: 1 / span 1;
+
+            h3{
+                font-family:$font-family-primary;
+                padding: $spacing-unit-base;
+                color:$color-background;
+                line-height:1.25; 
+                font-size:2.75rem;
+            }
+
+        }
+        figure:nth-child(3){
+            grid-column: 2 / 3;
+            grid-row: 2 / span 1;
+
+            h3{
+                font-family:$font-family-primary;
+                padding: $spacing-unit-base;
+                color:$color-background;
+                line-height:1.25; 
+                font-size:2rem;
+            }
+
+        }
+        figure:nth-child(4){
+            grid-column: 3 / 4;
+            grid-row: 2/ span 1;
+
+            h3{
+                font-family:$font-family-primary;
+                padding: $spacing-unit-base;
+                color:$color-background;
+                line-height:1.25; 
+                font-size:2rem;
+            }
+
+        }
+
+        .more-adventures-button{
             text-decoration:none;
+            text-align:center;
+            background-color:$color-brand-green;
+            width:47.5%;
             color:$color-background;
-            border: 1px solid black;
+            padding:0.5em 0.5em;
+            margin-bottom:3vw;
+            @include font-secondary-uppercase(){
+                font-size:1.5rem;
+            };
         }
     }
 }
