@@ -17,16 +17,26 @@
     .product-categories{
         width:30%;
         margin-bottom:3rem; //same size as SHOPSTUFF font size;
-        ul{
+        .menu-product-categories-container{
+            width:100%;
             display:flex;
+            flex-direction:row;
             justify-content:space-evenly;
-    
-            a{
-                text-decoration:none;
-                text-align:center;
-                @include font-secondary-uppercase{
-                    font-size:1.5rem;
-                    color:$color-brand-green;
+
+            .menu{
+                width:100%;
+                display:flex;
+                flex-direction:row;
+                justify-content:space-evenly;
+                li{
+                    a{
+                        text-decoration:none;
+                        text-align:center;
+                        @include font-secondary-uppercase{
+                            font-size:1.5rem;
+                            color:$color-brand-green;
+                        }
+                    }
                 }
             }
         }
@@ -76,7 +86,6 @@
                 width:100%;
                 font-size:1.25rem;
                 overflow:hidden;
-    
                 border-top:7px solid #e1e1e1;
                 height:4.5rem;
 
