@@ -79,12 +79,6 @@
                 @include font-secondary-uppercase();
             }
 
-
-
-
-
-           
-            
         }
 
     }
@@ -94,22 +88,70 @@
         padding:4.5rem;
         grid-column: 2 / 3;
 
-            .sidebar-headings{
-                color:$color-brand-purple;
-                font-size:1.75rem;
-                @include font-secondary-uppercase{
-                    font-weight:bold;
-                    letter-spacing:0.05em;
-                };
+        .sidebar-headings{
+            margin-bottom:$spacing-unit-base;
+            color:$color-brand-purple;
+            font-size:1.75rem;
+            @include font-secondary-uppercase{
+                font-weight:bold;
+                letter-spacing:0.05em;
+            };
+        }
+
+        aside{
+            margin-bottom:3rem;
+        }
+
+        .text-7{
+            .textwidget{
+                display:grid;
+                width:100%;
+                grid-template-rows: repeat(2,3rem) 5rem;
             }
+        }
+
+            
 
             .textwidget{
+
+                display:grid;
+                width:100%;
+                grid-template-rows: repeat(3,3rem);
+                
                 .widget-row{
-                font-size:1.25rem;
+                    display:flex;
+                    justify-content:flex-start;
+                    align-items:flex-start;
+                    line-height:$line-height-base;
+                    font-size:1.25rem;
+
+                    a{
+                        text-decoration:none;
+                        color:$color-brand-green;
+                    }
+
+                    & > *{
+                        line-height:$line-height-base;
+                    }
+
+                    i{
+                        margin-right:1rem;
+                    }
+        
+                    p{
+                        font-family:$font-family-primary;
+                        text-transform:none;
+                        
+                        em{
+                            font-weight:bold;
+                            margin-right:0.1em;
+                        }
+                    }
                 }
             }
 
             & > aside:nth-child(3){
+                display:block;
                 a{
                     color:$color-brand-green;
                     text-decoration:none;
